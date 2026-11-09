@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import "./App.css";
 
-const API = "/api";
+const API = import.meta.env.VITE_API_BASE_URL || "/api";
 
 function App() {
   const [page, setPage] = useState("Dashboard");
